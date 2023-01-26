@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.8.0"
+    kotlin("js")
 }
 
 repositories {
@@ -11,7 +11,7 @@ dependencies {
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom-legacy:18.2.0-pre.479")
     // implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.322-kotlin-1.6.10")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.6-pre.479")
-    implementation(project(":core"))
+    implementation(project(":react-quiz-and-progress"))
     implementation("com.ccfraser.muirwik:muirwik-components:0.10.1")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion:11.10.5-pre.479")
     implementation(npm("@material-ui/core", "4.12.4"))

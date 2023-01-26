@@ -221,7 +221,7 @@ class QuestionSetProgressController(
         return depQuestionsFieldIDs.joinToString("-")
     }
 
-    fun tryAnsQuesAndGoToNxtQues(answerFieldID: Int, answerOnSuccess: (question: Question, answerFieldID: Int) -> Unit) {
+    fun tryAnsQuesAndGoToNxtQues(answerId: Int, answerOnSuccess: (question: Question, answerFieldID: Int) -> Unit) {
         val curQues = this.currentQuestion // @ curQuesI
 
         /**
@@ -243,14 +243,14 @@ class QuestionSetProgressController(
                 val depQuesID = nextIncrQues.dependentQuestionID
                 return if (depQuesID != null) {
                     if (this.showFlagsForDepQuestions.contains(nextIncrQues.id)) {
-                        answerOnSuccess(curQues, answerFieldID)
+                        answerOnSuccess(curQues, answerId)
                         this.questionOnChange(nextIncrQues)
                         true
                     } else {
                         goToNextQuestion(dependentQuesSkip + 1)
                     }
                 } else {
-                    answerOnSuccess(curQues, answerFieldID)
+                    answerOnSuccess(curQues, answerId)
                     this.questionOnChange(nextIncrQues)
                     true
                 }
@@ -260,12 +260,12 @@ class QuestionSetProgressController(
                     console.log("Forgotten question")
                     this.mode = Mode.FORGOTTEN_QUESTIONS
                     this.curQusIncr = forgottenQuesIncr
-                    answerOnSuccess(curQues, answerFieldID)
+                    answerOnSuccess(curQues, answerId)
                     this.questionOnChange(this.currentQuestion)
                     return true
                 } else {
                     this.mode = Mode.STANDARD
-                    answerOnSuccess(curQues, answerFieldID)
+                    answerOnSuccess(curQues, answerId)
                     // TUS : CLEAN_UP - Since the next question does not exist, role back to previous pos incr
                     this.curQusIncr -= dependentQuesSkip
                     console.log(this.curQusIncr)
@@ -295,7 +295,7 @@ class QuestionSetProgressController(
         // DEIREAIDH : Serialize curQues.path to IDs and construct an Extended QaA path
 
         val quesByExtQaAPath = curQues.path + ":" + depQuestionsFieldIDs.joinToString("-") +
-                (if (depQuestionsFieldIDs.isEmpty()) "" else "-") + answerFieldID
+                (if (depQuestionsFieldIDs.isEmpty()) "" else "-") + answerId
 
         console.log("progressIncrementRegistry keys", this.progressIncrementRegistry.keys.toTypedArray())
         console.log("progressIncrementRegistry values", this.progressIncrementRegistry.values.toTypedArray())
@@ -331,7 +331,7 @@ class QuestionSetProgressController(
 
             childQuestions.forEach {
                 val ques = this.questionsByID[it]!!
-                if (ques.dependentAnswerIds.contains(answerFieldID)) {
+                if (ques.dependentAnswerIds.contains(answerId)) {
                 } else {
                     resetQuestionProgressAtId(it)
                     resetSubQuestionProgress(ques)
@@ -344,9 +344,9 @@ class QuestionSetProgressController(
             this.progressIncrsAppendedToQues[curQues.id] = incr
         }
 
-        val quesByQaAPath = curQues.path + "-" + answerFieldID
+        val quesByQaAPath = curQues.path + "-" + answerId
 
-        this.answerSet[currentQuestion.id] = answerFieldID
+        this.answerSet[currentQuestion.id] = answerId
 
         // TODO: Implement unAnsweredQuestion
         val depQuestions = this.depQuestionsByQaAPath[quesByQaAPath]

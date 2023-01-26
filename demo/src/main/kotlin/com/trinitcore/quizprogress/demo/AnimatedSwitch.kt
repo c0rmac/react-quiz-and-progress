@@ -1,5 +1,6 @@
-package com.trinitcore.quizprogress.demo.wrapper
+package com.trinitcore.quizprogress.demo
 
+import com.trinitcore.quizprogress.demo.wrapper.glamorCss
 import com.trinitcore.quizprogress.demo.wrapper.reactroutertransition.AnimatedSwitchProps
 import com.trinitcore.quizprogress.demo.wrapper.reactroutertransition.animatedSwitch
 import com.trinitcore.quizprogress.demo.wrapper.reactroutertransition.spring
@@ -21,8 +22,8 @@ private fun glide(value: Double): dynamic {
 
 // DEIREADH
 
-fun RBuilder.hoCAnimatedSwitch(handler: RHandler<AnimatedSwitchProps>)
-        = animatedSwitch(className = "view-holder-container") {
+fun RBuilder.animatedSwitch(handler: RHandler<AnimatedSwitchProps>)
+        = this@animatedSwitch.animatedSwitch(className = "view-holder-container") {
     attrs {
         atEnter = js { }
         atEnter.asDynamic().offset = 100
@@ -37,8 +38,8 @@ fun RBuilder.hoCAnimatedSwitch(handler: RHandler<AnimatedSwitchProps>)
         mapStyles = { styles: dynamic ->
             js {
                 if (styles.offset == 0) {
-                    this.transform = "unset"
-                } else this.transform = "translateX(" + styles.offset + "%)"
+                    transform = "unset"
+                } else transform = "translateX(" + styles.offset + "%)"
             }
         }
     }
