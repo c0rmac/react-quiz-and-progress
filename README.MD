@@ -1,5 +1,6 @@
 # React Quiz and Progress
 Build a Questionnaire with a progress bar for React Js app.
+[Click here](https://github.com/c0rmac/react-quiz-and-progress/blob/main/README.ga.MD) to see the README in Irish Gaelic. 
 
 ## Motivation
 In 2020, I was working on an application called [House of Costs](https://c0rmac.github.io/portfolio/house-of-costs/)
@@ -55,7 +56,7 @@ QuestionSetProgressController(
         // Define a prefilled answer set, if needed
         defaultAnswerSet = null
     ),
-    // Specifiy the current question the end user is on
+    // Specify the current question the end user is on
     currentQuestionID = 1,
     // Some callbacks
     questionOnChange = ::questionOnChange,
@@ -108,11 +109,10 @@ to setup the questionnaire using react router to present each question by its ow
 I'd also like to warn you that I have not switched to using more modern
 React Js coding conventions, so I apologise for my dinosaur code. 
 
-As usual, install with 
-
 ### Javascript ES6 (Regular React Js project)
 I will publish instructions on this in the future as I am no longer familiar with ES6 anymore.
-But it should be similar. Help here would be very welcome!
+But it should be similar to the Kotlin Js setup, provided you are
+somewhat comfortable with reading basic Kotlin. Help here would be very welcome!
 
 As usual, you can retrieve the plugin by running the following
 
@@ -123,7 +123,18 @@ npm i react-quiz-and-progress
 ### Kotlin Js
 In your build.gradle.kts file, add the following
 ```kotlin
+// Required dependency
 implementation(npm("react-quiz-and-progress","1.0.0"))
+
+// Usual Kotlin React Js (legacy) dependencies
+implementation("org.jetbrains.kotlin-wrappers:kotlin-react-legacy:18.2.0-pre.479")
+implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom-legacy:18.2.0-pre.479")
+implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.6-pre.479")
+implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.256-kotlin-1.5.31")
+implementation(npm("react-router-transition", "2.0.0"))
+implementation(npm("glamor", "2.20.40"))
+implementation(npm("react-visibility-sensor", "5.1.1"))
+implementation(npm("react-animate-height", "2.0.21"))
 ```
 
 Client.kt file

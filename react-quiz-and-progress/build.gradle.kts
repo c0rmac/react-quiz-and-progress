@@ -7,7 +7,7 @@ plugins {
 apply(from = "properties.secret.gradle.kts")
 
 group = "com.trinitcore"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
