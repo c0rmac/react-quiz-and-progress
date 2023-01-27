@@ -25,6 +25,8 @@ ar chód [demo anseo](https://github.com/c0rmac/react-quiz-and-progress/tree/mai
 Beidh oraibh an demo a oscailt in Intelij Idea mar is tionscadal Kotlin Js é. 
 Úsáidim material-ui mar bhunús an comhéadain.
 
+![Demo](https://raw.githubusercontent.com/c0rmac/react-quiz-and-progress/main/README/ezgif-3-629ea576ae.gif)
+
 ## Sonraí Teicniúla
 Forbraíodh an breiseán i gKotlin React Js (mar gheall ar gur dual dom Kotlin Multiplatform).
 Foilseod tuilleadh sonraí teicniúla ar mo bhreiseán ar mo bhlag go luath.

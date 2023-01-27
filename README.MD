@@ -27,6 +27,8 @@ at code [demo here](https://github.com/c0rmac/react-quiz-and-progress/tree/main/
 You will need to open the demo in Intelij Idea as it is a Kotlin Js project.
 I use material-ui as the basis of the interface.
 
+![Demo](https://raw.githubusercontent.com/c0rmac/react-quiz-and-progress/main/README/ezgif-3-629ea576ae.gif)
+
 ## Technical Details
 The plugin was developed in Kotlin React Js (since I use Multiplatform Kotlin by nature).
 I will publish more of the technical details of my plugin on my blog soon.
