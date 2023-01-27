@@ -21,6 +21,12 @@ a smaller increment is rewarded to the progress bar. For questions that are "dep
 that are dependent on other questions (and that are dependent on other questions and so on),
 an even smaller increment is rewarded to the progress bar.
 
+## Demonstration
+If you're interested in trying out the plugin without any setup, I encourage you to take a look
+at code [demo here](https://github.com/c0rmac/react-quiz-and-progress/tree/main/demo).
+You will need to open the demo in Intelij Idea as it is a Kotlin Js project.
+I use material-ui as the basis of the interface.
+
 ## Technical Details
 The plugin was developed in Kotlin React Js (since I use Multiplatform Kotlin by nature).
 I will publish more of the technical details of my plugin on my blog soon.

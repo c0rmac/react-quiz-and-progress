@@ -7,10 +7,10 @@ inar fiafraíodh den úsáideoir ceistneoir pearsantaithe a chomhlíonadh.
 D'eascair castacht éagsúil ar struchtúr na gceisteanna, de bharr gur nocht freagruithe áirithe
 ar cheisteanna áirithe fo-cheisteanna nua ina ndiadih. Thabharfadh siúd tuiscint
 go mbeadh an t-uafas ceisteanna le freagairt ag an úsáideoir, agus ní mó ná maith é nach raibh
-comhartha ar bith le haghaidh an méid a bheadh fágtha ag úsáideoir a fhreagairt.
+comhartha ar bith le haghaidh an méid a bheadh fágtha ag úsáideoir le freagairt.
 
 Dhá bharr sin, d'inspreag seo mo choincheap-sa - barra líneach foráis a thabharfadh comhartha
-iomasach don úsáideoir ar an méid den cheistneoir atá freagraithe ag an úsáideoir.
+iomasach don úsáideoir ar an méid den cheistneoir a bheadh freagraithe ag an úsáideoir.
 
 De réir mar a fhreagraíonns an t-úsáideoir ceisteanna, léirítear tuilleadh foráis ar
 an mbarra líneach. I gcás ceisteanna atá "neamhspleách" (eadhon: nach mbraitheann ar
@@ -18,6 +18,12 @@ fhreagra ar a gceisteanna roimhe), bronntar méadú mór don bharra foráis.
 I gcás ceisteanna atá "spleách", bronntar méadú laghdaithe don bharra foráis.
 I gcás ceisteanna spleácha a bhraitheanns ar cheisteanna eile (agus a bhraitheanns ar cheisteanna eile agus mar sin de),
 bronntar méadú laghdaithe aríst don bharra foráis.
+
+## Taispeántas
+Más suim leat triail a bhaint as an mbreiseán gan socrú ar bith a dhéanamh, molaim dhaoibh breathnú
+ar chód [demo anseo](https://github.com/c0rmac/react-quiz-and-progress/tree/main/demo). 
+Beidh oraibh an demo a oscailt in Intelij Idea mar is tionscadal Kotlin Js é. 
+Úsáidim material-ui mar bhunús an comhéadain.
 
 ## Sonraí Teicniúla
 Forbraíodh an breiseán i gKotlin React Js (mar gheall ar gur dual dom Kotlin Multiplatform).
@@ -119,7 +125,7 @@ npm i react-quiz-and-progress
 ```
 
 ### Kotlin Js
-I do chomhad build.gradle.kts file, cuir leis an méid seo a leanas
+I bhur gcomhad build.gradle.kts file, cuir leis an méid seo a leanas
 ```kotlin
 // Required dependency
 implementation(npm("react-quiz-and-progress","1.0.0"))
