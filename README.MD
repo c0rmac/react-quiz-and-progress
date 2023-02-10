@@ -2,6 +2,8 @@
 Build a Questionnaire with a progress bar for React Js app.
 [Click here](https://github.com/c0rmac/react-quiz-and-progress/blob/main/README.ga.MD) to see the README in Irish Gaelic. 
 
+[See my Portfolio](https://c0rmac.github.io/portfolio/) or [Find out more](https://c0rmac.github.io/portfolio/react-quiz-and-progress/) about React Quiz and Progress.
+
 ## Motivation
 In 2020, I was working on an application called [House of Costs](https://c0rmac.github.io/portfolio/house-of-costs/)
 in which a user personalised questionnaire was asked to be fulfilled by
