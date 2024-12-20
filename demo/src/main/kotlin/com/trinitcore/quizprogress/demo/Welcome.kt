@@ -82,6 +82,7 @@ class DemoAnswerButton : RComponent<DemoAnswerButtonProps, State>() {
                     // if (props.className != null) css { +props.className!! }
                     styledDiv {
                         css { +Style.inner }
+                        console.log("isSelected", isSelected)
                         radio(color = ControlColor.primary, checked = isSelected) {
 
                         }
@@ -98,6 +99,7 @@ class DemoAnswerButton : RComponent<DemoAnswerButtonProps, State>() {
 
 interface DemoQuestionAndAnswerProps : Props {
     var question: Question
+    var answerId: Int?
     var handleQuestionAnswered: (matrixAnswerID: Int) -> Unit
     var backButtonOnClick: () -> Unit
 }
@@ -107,7 +109,7 @@ class DemoQuestionAndAnswer : RComponent<DemoQuestionAndAnswerProps, State>() {
         child(QuestionAndAnswer::class) {
             attrs.showForgettenQuesWarn = QuestionSetProgressController.Mode.STANDARD
             attrs.question = props.question
-            attrs.answerID = null
+            attrs.answerID = props.answerId
             attrs.handleQuestionAnswered = props.handleQuestionAnswered
             attrs.backButtonOnClick = props.backButtonOnClick
             attrs.answerButtonRender = { answer, ansStateControl ->
@@ -333,6 +335,7 @@ class Welcome(props: WelcomeProps) : RComponent<WelcomeProps, WelcomeState>(prop
                                     this.attrs.onChange =
                                         { visible: Boolean -> handleMatrixQuestionRouteOnChange(visible, question) }
                                     child(DemoQuestionAndAnswer::class) {
+                                        attrs.answerId = state.controller.answerSet[question.id]
                                         attrs.question = question
                                         attrs.handleQuestionAnswered = ::handleMatrixQuestionAnswered
                                     }

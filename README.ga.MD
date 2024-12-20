@@ -4,7 +4,7 @@ Tóig Ceistneoir le barra foráis le haghaidh aip React Js
 [Féach mo Phortfolio](https://c0rmac.github.io/ga/portfolio/) nó [Cuir tuilleadh aithne](https://c0rmac.github.io/ga/portfolio/react-quiz-and-progress/) ar React Quiz and Progress.
 
 ## Inspreagadh
-I 2020, bhí mé ag oibriú ar fheidhmchlár ar a dtugtar [House of Costs](https://c0rmac.github.io/portfolio/house-of-costs/)
+I 2020, bhí mé ag oibriú ar fheidhmchlár ar a dtugtar [House of Costs](https://c0rmac.github.io/ga/portfolio/house-of-costs/)
 inar fiafraíodh den úsáideoir ceistneoir pearsantaithe a chomhlíonadh.
 D'eascair castacht éagsúil ar struchtúr na gceisteanna, de bharr gur nocht freagruithe áirithe
 ar cheisteanna áirithe fo-cheisteanna nua ina ndiadih. Thabharfadh siúd tuiscint
@@ -26,6 +26,8 @@ Más suim leat triail a bhaint as an mbreiseán gan socrú ar bith a dhéanamh, 
 ar chód [demo anseo](https://github.com/c0rmac/react-quiz-and-progress/tree/main/demo). 
 Beidh oraibh an demo a oscailt in Intelij Idea mar is tionscadal Kotlin Js é. 
 Úsáidim material-ui mar bhunús an comhéadain.
+
+Is féidir leat píosa spraoi a bhaint as an [demo réamh-thógáilte anseo]().
 
 ![Demo](https://raw.githubusercontent.com/c0rmac/react-quiz-and-progress/main/README/ezgif-3-629ea576ae.gif)
 

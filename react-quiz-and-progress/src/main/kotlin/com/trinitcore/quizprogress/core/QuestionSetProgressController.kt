@@ -69,7 +69,6 @@ class QuestionSetProgressController(
         }
 
         fun assignQues(question: Question) {
-            // console.log("assignQues")
             if (questionIdsToDependentQuesIds[question.dependentQuestionID] == null) {
                 questionIdsToDependentQuesIds[question.dependentQuestionID!!] = mutableSetOf()
             }
@@ -235,7 +234,6 @@ class QuestionSetProgressController(
          * is féidir this.questionSetOnFulfilled a chur i bhfeidhm
          * */
         fun goToNextQuestion(dependentQuesSkip: Int = 1): Boolean {
-            console.log("curQusIncr", this.curQusIncr)
             val nextIncrQues = this.nextIncrQues // @ curQuesI + 1
             val showFlagsForDepQuestions = this.showFlagsForDepQuestions
 
@@ -257,7 +255,6 @@ class QuestionSetProgressController(
             } else {
                 val forgottenQuesIncr = this.getForgottenQuesIncr()
                 if (forgottenQuesIncr != null) {
-                    console.log("Forgotten question")
                     this.mode = Mode.FORGOTTEN_QUESTIONS
                     this.curQusIncr = forgottenQuesIncr
                     answerOnSuccess(curQues, answerId)

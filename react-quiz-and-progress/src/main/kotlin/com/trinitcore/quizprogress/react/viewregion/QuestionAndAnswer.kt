@@ -71,10 +71,10 @@ class QuestionAndAnswer : RComponent<QuestionAndAnswerProps, QuestionAndAnswerSt
     }
 
     override fun componentWillMount() {
-        //console.log("componentWillMount")
         state.ansStateControl = props.question.answers.map {
             AnswerButton.StateControl(isSelected = false, answer = it)
         }
+
         if (props.answerID != null) {
             state.ansStateControl.forEach {
                 it.isSelected = (props.answerID == it.answer.id)
