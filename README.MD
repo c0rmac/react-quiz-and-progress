@@ -29,7 +29,7 @@ at code [demo here](https://github.com/c0rmac/react-quiz-and-progress/tree/main/
 You will need to open the demo in Intelij Idea as it is a Kotlin Js project.
 I use material-ui as the basis of the interface.
 
-You can also play with pre-built [demo here]().
+You can also play with pre-built [demo here](https://c0rmac.github.io/react-quiz-and-progress/#/1).
 
 ![Demo](https://raw.githubusercontent.com/c0rmac/react-quiz-and-progress/main/README/ezgif-3-629ea576ae.gif)
 
